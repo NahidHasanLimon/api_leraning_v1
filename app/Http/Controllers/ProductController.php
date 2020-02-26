@@ -17,11 +17,12 @@ class ProductController extends Controller
     {
         //
         $products=Product::all();
-        $products_paginate=Product::paginate(5);
+        // $products_paginate=Product::paginate(5);
         // dd($products);
         // return ProductResource::collection(Product::paginate(5) );
         // return ProductCollection::collection($products);
-        return response(ProductCollection::collection(Product::paginate(5)));
+        // return response(ProductCollection::collection(Product::paginate(5)));
+        return ProductCollection::collection(Product::all() );
       
     }
 
